@@ -8,8 +8,8 @@ A single docker container containing a backend and frontend to host your content
 
 - Lens Protocol
 - PocketBase backend (sqlite db, admin dashboard)
-- Vite + React + Typescript frontend
-- Docker
+- Bun + Vite + React + Typescript frontend
+- Docker deployment
 
 ## Run Locally
 
@@ -17,21 +17,24 @@ Run
 
 `./pocketbase serve`
 
+Note: If command returns permission error, may need to `chmod +x pocketbase` to set execute permissions
+
 This will launch a webserver with the following routes:
 
+- `http://http://127.0.0.1:8090` : Frontend
 - `http://http://127.0.0.1:8090/_`: Admin dashboard UI
-- `http://http://127.0.0.1:8090/api`:REST API
+- `http://http://127.0.0.1:8090/api`: REST API
 
-There a few options to run the frontend locally. To avoid re-building during development, in a separate terminal be sure you have yarn installed, then start frontend with:
+There a few options to run the frontend locally. To avoid re-building during development, in a separate terminal be sure you have bun installed, then start frontend with:
 
-`yarn && yarn dev`
+`bun && bun dev`
 
 or you can run a static version of the site with your local Pocketbase instance:
 
-`yarn build`
+`bun build`
 `./pocketbase serve`
 
-or you can run a static version through docker:
+or you can run a static version through docker (currently Dockerfile not setup to work with Bun, will be re-added later)
 
 `docker build -t my-app .`
 `docker run -it -rm -p 8090:8090 my-app`
