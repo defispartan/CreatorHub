@@ -17,8 +17,6 @@ Run
 
 `./pocketbase serve`
 
-Note: If command returns permission error, may need to `chmod +x pocketbase` to set execute permissions
-
 This will launch a webserver with the following routes:
 
 - `http://http://127.0.0.1:8090` : Frontend
