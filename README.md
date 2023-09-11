@@ -17,7 +17,7 @@ Make sure you have Bun installed locally:
 
 In separate terminals, run:
 
-- Frontend with `bun run dev`
-- Backend with `bun run dev`
+- Frontend with `bun run dev` in `frontend/` directory
+- Backend with `bun run dev` in `backend/` directory
 
 By default, backend will run on `127.0.0.1:3000` and frontend will run on `127.0.0.1:5173`. The frontend will connect to backend by listening to `VITE_BACKEND_PATH` URL in `/frontend/.env`.
